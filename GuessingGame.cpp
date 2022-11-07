@@ -28,6 +28,7 @@ int main () {
     
 	
 	char letter;
+	string exit;
 	int choice;
 	bool keepPlaying = true;
 	string blanks = "";
@@ -40,10 +41,15 @@ int main () {
 	while(!valid){
 		choice = 0;
 		cin >> choice;
+//		if
 		if(choice >= 1 && choice <=5){
 			valid = true;
 		}else{
 			cout << "Please enter a number in the range 1-5: ";
+		}
+		
+		if(exit == "exit"){
+			goto end;
 		}
 		
 	}
@@ -125,8 +131,9 @@ int main () {
 	char playagain;
 	cin >> playagain;
 	if(playagain == 'n'){
+		end:
 		keepPlaying = false;
-		cout << "Sayonara, Player!";
+		cout << "Farewell, Player!";
 	}
 	
 		}
