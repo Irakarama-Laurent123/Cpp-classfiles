@@ -4,17 +4,17 @@
 using namespace std;
 
 int main() {
-	char arr[17];
+	string reverse;
 	string str= "Laurent Irakarama";
 	int length = str.length();
 
 	
 	for (int i = length ; i >= 0; i-- ){
 		cout << str[i]<< endl;
-		char arr[i] = str[i];
+		reverse += str[i];
 	}
 	
-	cout << arr;
+	cout << reverse;
 	
 	return 0;
 }
